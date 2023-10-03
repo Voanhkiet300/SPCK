@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(25, 12, 82);
+    width: 100%;
+    height: 60px;
+}
+.header-left {
+    display: flex;
+}
+
+.logo {
+    padding: 8px 10px;
+    width: 130px;
+    height: 55px;
+}
+.header-right {
+    display: flex;
+}
+
+
+.hea_content {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    text-transform: uppercase;
+}
+
+.hea_content:hover {
+    background-color: rgb(50, 50, 120);
+}
+
+.hea_setting {
+    color: white;
+    padding: 10px 18px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+.hea_setting:hover {
+    background-color: rgb(50, 50, 120);
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+nav {
+    flex-grow: 1;
+    background-image: url('https://cdn.dribbble.com/users/7212182/screenshots/16734009/media/54e2611fa7c798e6e00d8bb1336151b0.jpg?resize=1000x750&vertical=center');
+    background-repeat: no-repeat;
+    background-color: rgb(43, 7, 94);
+    width: 20%;
+    padding-bottom: 50vh;
+}
+
+.nav_box {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.nav_content {
+    color: white;
+    text-decoration: none;
+    padding: 20px 20px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.main {
+    background-color: rgb(90, 90, 180);
+}
+
+.nav_content:hover {
+    background-color: rgb(50, 50, 120);
+}
+.box {
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(115, 216, 234);
+    justify-content: center;
+}
+h1 {
+    margin-bottom: 50px;
+}
+h2 {
+    margin-bottom: 20px;
+    font-size: xx-large;
+    margin-left: 20px;
+}
+.content_container1 {
+    margin-bottom: 50px;
+}
+.content_box {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+}
+.content_box h3 {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    font-size: x-large;
+    font-weight: 4000;
+}
+.content_box p {
+    padding-bottom: 20px;
+    text-align: justify;
+    font-size:x-large;
+    margin: 0 20px;
+    width: 95%;
+}
+.content_box img {
+    padding: 5px 0;
+    margin: 0 20px;
+    width: 80%;
+}
+.information h3 {
+    color: black;
+}
+.information p {
+    color: black;
+}
+
+
+footer {
+    background-color: green;
+    height: 100px;
+}
