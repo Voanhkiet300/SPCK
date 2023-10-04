@@ -18,6 +18,12 @@ let ContentList = [
         'tittle': ['12 bộ phim kinh dị được xem nhiều trong dịp Halloween'],
         'image': ['https://image.vtc.vn/resize/th/upload/2021/10/13/beetlejuice-17363793.jpg'],
         'paragraph': ['Xem kinh dị là một hoạt động giải trí rất được ưa chuộng trong dịp Halloween, rất nhiều bộ phim thuộc diện kinh điển được xem đi xem lại.']
+    },
+    {
+        'href': ['event-content/Chuyện kinh dị/event-content.html'],
+        'tittle': ['Tổng hợp truyện ma Halloween nghe rùng mình nhất'],
+        'image': ['https://taimienphi.vn/tmp/cf/aut/fnl8-truyen-ma-hallowen-nghe-rung-minh-nhat-1.jpg'],
+        'paragraph': ['tổng hợp rất nhiều câu chuyện ma kinh dị, giật mình hay nhất giúp bạn có nhiều lựa chọn và kéo dài buổi lễ hội hóa trang của mình hơn.']
     }
 ]
 

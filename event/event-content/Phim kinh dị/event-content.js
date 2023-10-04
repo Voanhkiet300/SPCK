@@ -81,6 +81,16 @@ let ContentList = [
         'paragraph': ['"Ed Wood" chắc chắn không phải là một trong những bộ phim đáng sợ nhất của Burton. Ttuy nhiên, nếu bạn thích xem phim của Tim Burton vì óc thẩm mỹ của ông, hoặc thích những bộ phim kinh dị đen trắng của thập niên 1950 thì "Ed Wood" là lựa chọn tuyệt vời. Bộ phim theo chân nam diễn viên Johnny Depp trong vai Ed Wood, người đã thực hiện "Kế hoạch 9 từ không gian bên ngoài" và được biết đến rộng rãi như một đạo diễn tồi nhất mọi thời đại. ', 'Tình bạn của Wood với ngôi sao "Dracula" nổi tiếng, Bela Lugosi là trung tâm của bộ phim. Mặc dù Wood và Lugosi được coi là trò cười cho các đồng nghiệp nhưng bộ phim đối xử với họ bằng sự đồng cảm và tôn trọng, điều này khiến "Ed Wood" trở thành bộ phim kinh điển. Diễn xuất của Martin Landau trong vai Lugosi là một điểm đặc biệt. Nhìn chung, nếu bạn đang tìm kiếm một bộ phim Halloween cổ điển thì "Ed Wood" là lựa chọn tuyệt vời.']
     }
 ]
+let text = []
+let index = 0;
+
+function paragraph() {
+    text = ``
+    for (let i = 0; i < ContentList[index].paragraph.length; i++) {
+        text += `<p>${ContentList[index].paragraph[i]}</p>`
+    }
+    return text
+}
 
 
 
@@ -92,35 +102,30 @@ for (let Content of ContentList) {
         contents.innerHTML += `<div id="content_box" class="content_box">
             <h3>${Content.tittle}</h3>
             ${Content.video}
-            <p>${Content.paragraph[0]}</p>
-            <p>${Content.paragraph[1]}</p>
+            ${paragraph()}
             <img src="${Content.image}" alt="">
             </div>`
     } else if (Content.paragraph.length == 3) {
         contents.innerHTML += `<div id="content_box" class="content_box">
         <h3>${Content.tittle}</h3>
         ${Content.video}
-        <p>${Content.paragraph[0]}</p>
-        <p>${Content.paragraph[1]}</p>
-        <p>${Content.paragraph[2]}</p>
+        ${paragraph()}
         <img src="${Content.image}" alt="">
         </div>`
     } else if (Content.paragraph.length == 4) {
         contents.innerHTML += `<div id="content_box" class="content_box">
         <h3>${Content.tittle}</h3>
         ${Content.video}
-        <p>${Content.paragraph[0]}</p>
-        <p>${Content.paragraph[1]}</p>
-        <p>${Content.paragraph[2]}</p>
-        <p>${Content.paragraph[3]}</p>
+        ${paragraph()}
         <img src="${Content.image}" alt="">
         </div>`
     } else {
         contents.innerHTML += `<div id="content_box" class="content_box">
             <h3>${Content.tittle}</h3>
             ${Content.video}
-            <p>${Content.paragraph}</p>
+            ${paragraph()}
             <img src="${Content.image}" alt="">
             </div>`
     }
+    index++
 }
