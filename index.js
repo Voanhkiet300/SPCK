@@ -53,6 +53,10 @@ for (let Content of ContentList) {
 
 }
 
+function setting(event) {
+    event.preventDefault()
+    
+}
 
 
 
@@ -80,14 +84,14 @@ function userprint() {
         console.log(user);
         right.innerHTML = `<a class="hea_content" href="account/login/login.html">Login</a>
         <a class="hea_content" href="account/register/register.html">register</a>
-        <a class="hea_setting" href="setting">
+        <a onclick="setting()" cclass="hea_setting" href="setting">
         <i class="fa fa-gear" style="font-size:36px;"></i>
     </a>`
     } else {
         console.log(user);
         right.innerHTML = `
     <h3 class="hea_user">${user[0].name}</h3>
-    <a class="hea_setting" href="setting">
+    <a onclick="setting()" class="hea_setting" href="">
         <i class="fa fa-gear" style="font-size:36px;"></i>
     </a>`
     }

@@ -9,40 +9,57 @@ let img = document.getElementById('img')
 let label = document.getElementById('label')
 let url = ''
 
-
 Newpost.addEventListener("submit", (event) => {
     event.preventDefault()
-    let caption = document.getElementById("caption")
-    let content = document.getElementById('contentInput')
-    console.log(url);
-    Post = {
-        'id': myPost.length + 1,
-        'username': user[0].name,
-        'caption': caption.value,
-        'content': content.value,
-        'image': url
+    if (user.length > 0) {
+        let caption = document.getElementById("caption")
+        let content = document.getElementById('contentInput')
+        console.log(url);
+        Post = {
+            'id': myPost.length + 1,
+            'username': user[0].name,
+            'caption': caption.value,
+            'content': content.value,
+            'image': url
+        }
+        myPost.push(Post)
+        localStorage.setItem('myPost', JSON.stringify(myPost))
+        Toastify({
+            text: "Đăng bài thành công!",
+            duration: 3000,
+            destination: "https://github.com/apvarun/toastify-js",
+            newWindow: true,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "center", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+                background: "linear-gradient(to right, #00b09b, #96c93d)",
+            },
+            onClick: function () { } // Callback after click
+        }).showToast();
+    } else {
+        Toastify({
+            text: "Bạn cần đăng nhập trước",
+            duration: 3000,
+            destination: "https://github.com/apvarun/toastify-js",
+            newWindow: true,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: "center", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+                background: "linear-gradient(to right, #00b09b, #96c93d)",
+            },
+            onClick: function () { } // Callback after click
+        }).showToast();
     }
-    myPost.push(Post)
-    localStorage.setItem('myPost', JSON.stringify(myPost))
-    Toastify({
-        text: "Đăng bài thành công!",
-        duration: 3000,
-        destination: "https://github.com/apvarun/toastify-js",
-        newWindow: true,
-        close: true,
-        gravity: "top", // `top` or `bottom`
-        position: "center", // `left`, `center` or `right`
-        stopOnFocus: true, // Prevents dismissing of toast on hover
-        style: {
-          background: "linear-gradient(to right, #00b09b, #96c93d)",
-        },
-        onClick: function(){} // Callback after click
-      }).showToast();
+
 })
 
 const reader = new FileReader()
 image_input.onchange = (event) => {
-    const files  = event.target.files;
+    const files = event.target.files;
 
 
     reader.readAsDataURL(files[0])
