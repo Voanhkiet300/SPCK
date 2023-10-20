@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="education.css">
+    <link rel="stylesheet" href="post.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -17,7 +17,7 @@
             <a class="hea_content">About us</a>
             <a class="hea_content" href="https://mail.google.com/mail/u/0/#inbox">feedback</a>
         </div>
-        <div class="header-right">
+        <div class="header-right" id="right">
             <a class="hea_content" href="../account/login/login.html">Login</a>
             <a class="hea_content" href="../account/register/register.html">register</a>
             <a class="hea_setting" href="../setting">
@@ -30,37 +30,29 @@
                 <a href="../index.html" class="nav_content">Home</a>
                 <a href="../news/news.html" class="nav_content">News</a>
                 <a href="../sport/sport.html" class="nav_content">Sport</a>
-                <a href="../education/education.html" class="nav_content main">education</a>
+                <a href="../post/post.html" class="nav_content main">post</a>
                 <a href="../weather/weather.html" class="nav_content">weather</a>
                 <a href="../event/event.html" class="nav_content">event</a>
             </div>
         </nav>
         <div class="box">
-            <div class="content">
-                <div class="content_box">
-                    <a href="mentality/mentality.html">
-                        <img src="image/logo.png" alt="">
-                        <div class="information">
-                            <h3 class="">Lorem ipsum dolor sit amet.</h3>
-                            <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, ratione!</p>
-                        </div>
-                    </a>
+            <div id="content" class="content">
+                <div class="my_post">
+                    <h2>Bài đăng của tôi:</h2>
+                    <a class="create_post" href="post-content/NewPost/Newpost.html">Tạo bài đăng</a>
                 </div>
-                <div class="content_box">
-                    <a href="mentality/mentality.html">
-                        <img src="image/logo.png" alt="">
-                        <div class="information">
-                            <h3 class="">Lorem ipsum dolor sit amet</h3>
-                            <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, ratione!</p>
-                        </div>
-                    </a>
+                <div class="content_container" id="my_content">
+                </div>
+                <h2>Tất cả bài đăng:</h2>
+                <div class="content_container" id="all_content">
+
                 </div>
             </div>
             <footer>
 
             </footer>
         </div>
-    <script src="education.js"></script>
+        <script src="post.js"></script>
 </body>
 
 </html>

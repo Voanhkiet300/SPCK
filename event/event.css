@@ -30,6 +30,7 @@ header {
 
 
 .hea_content {
+    font-family: sans-serif;
     display: flex;
     align-items: center;
     color: white;
@@ -37,6 +38,16 @@ header {
     padding: 15px 25px;
     text-transform: uppercase;
 }
+.hea_user {
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    text-transform: uppercase;
+}
+
 
 .hea_content:hover {
     background-color: rgb(50, 50, 120);
@@ -94,11 +105,11 @@ nav {
 .content {
     width: 100%;
     display: flex;
-    flex-direction: column;
-    /* background-color: rgb(20, 20, 60); */
+    flex-wrap: wrap;
+    justify-content: center;
     background-color: rgb(115, 216, 234);
     background-color: rgb(red, green, blue);
-    height: 1000px;
+    height: 800px;
 }
 .content_box {
     margin: 1%;
@@ -131,6 +142,11 @@ nav {
 .information p {
     font-size: large;
     color: black;
+}
+.no_result {
+    align-self: center;
+    width: 50%;
+    height: fit-content;
 }
 
 

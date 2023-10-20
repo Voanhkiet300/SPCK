@@ -1,20 +1,93 @@
-// let abc = [
-//     {
-//         'tittle': "Halloween là ngày nào?",
-//         'img': 'https://cdn.nguyenkimmall.com/images/companies/_1/tin-tuc/tin-cong-nghe/halloween-la-ngay-nao-nguon-goc-va-y-nghia-ngay-halloween-thumbnail.jpg',
-//         'content': [
-//             "All Hallows’ Evening (viết tắt là Halloween) thường được biết đến với cái tên là “Lễ hội ma quỷ”. Thực tế, Halloween là một lễ hội truyền thống và đặc biệt ở phương Tây, nó thường được diễn ra hàng năm vào ngày 31/10, trước buổi lễ Các Thánh trong Kito Giáo. Halloween là thời điểm đánh dấu một mùa vụ thu hoạch đã kết thúc và đón chờ một mùa đông băng giá. Đồng thời, đây cũng là dịp để chúng ta cùng nhau tưởng nhớ về những vị Thánh, các vị Tử Đạo hay những người thân đã qua đời. Cho đến ngày nay, Halloween đã trở thành lễ hội phổ biến trên toàn thế giới, với quy mô lớn/nhỏ tùy vào mỗi quốc gia. "
-//         ]
-//     }
-// ]
+let contents = document.getElementById('content')
+let ContentList = [
+    {
+        'href': ['event/event-content/địa điểm/event-content.html'],
+        'tittle': ['Top 19 địa điểm đi chơi Halloween ở Sài Gòn và Hà Nội đặc sắc nhất'],
+        'image': ['https://www.vietnambooking.com/wp-content/uploads/2020/10/halloween-di-choi-o-dau-3.jpg'],
+        'paragraph': ['Cùng tìm hiểu về lễ hội Halloween và những địa điểm vui chơi ở Sài Gòn và Hà Nội nhé!']
+    },
+    {
+        'href': ['event/event-content/Ý nghĩa/event-content.html'],
+        'tittle': ['Halloween Là Ngày Nào? Nguồn Gốc Và Ý Nghĩa Ngày Halloween'],
+        'image': ['https://cdn.nguyenkimmall.com/images/companies/_1/tin-tuc/tin-cong-nghe/halloween-la-ngay-nao-nguon-goc-va-y-nghia-ngay-halloween-thumbnail.jpg'],
+        'paragraph': ['Hãy cùng tìm hiểu về nguồn gốc và ý nghĩa của ngày halloween nhé!']
+    },
+    {
+        'href': ['event/event-content/Phim kinh dị/event-content.html'],
+        'tittle': ['12 bộ phim kinh dị được xem nhiều trong dịp Halloween'],
+        'image': ['https://image.vtc.vn/resize/th/upload/2021/10/13/beetlejuice-17363793.jpg'],
+        'paragraph': ['Xem kinh dị là một hoạt động giải trí rất được ưa chuộng trong dịp Halloween, rất nhiều bộ phim thuộc diện kinh điển được xem đi xem lại.']
+    },
+    {
+        'href': ['event/event-content/Chuyện kinh dị/event-content.html'],
+        'tittle': ['Tổng hợp truyện ma Halloween nghe rùng mình nhất'],
+        'image': ['https://taimienphi.vn/tmp/cf/aut/fnl8-truyen-ma-hallowen-nghe-rung-minh-nhat-1.jpg'],
+        'paragraph': ['tổng hợp rất nhiều câu chuyện ma kinh dị, giật mình hay nhất giúp bạn có nhiều lựa chọn và kéo dài buổi lễ hội hóa trang của mình hơn.']
+    },
+    {
+        'href': ['event/event-content/Bí ngô/event-content.html'],
+        'tittle': ['Tổng hợp truyện ma Halloween nghe rùng mình nhất'],
+        'image': ['https://image.vtc.vn/resize/th/upload/2022/10/29/qua-bi-ngo-halloween-09195860.jpg'],
+        'paragraph': ['Những quả bí ngô khắc vô số hình thù độc đáo xuất hiện ở khắp nơi vào dịp Halloween, khiến nhiều người không khỏi thắc mắc về nguồn gốc, ý nghĩa của biểu tượng này.']
+    }
+]
 
 
-// for (const i of abc) {
-//     console.log(i.tittle);
-//     if (i.img) {
-//         console.log(i.img);
-//     }
-//     for (const a in i.content) {
-//         console.log(i.content[a]);
-//     }
-// }
+for (let Content of ContentList) {
+    if (ContentList.length > 0) {
+        contents.innerHTML += `<div class="content_box">
+        <a href="${Content.href}">
+            <img src="${Content.image}" alt="">
+            <div class="information">
+                <h3 class="">${Content.tittle}</h3>
+                <p class="">${Content.paragraph}</p>
+            </div>
+        </a>
+    </div>`;
+    } else {
+        contents.innerHTML = `<img src="no result.png" alt="">`
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function userprint() {
+    let user = JSON.parse(localStorage.getItem('user')) || []
+    let right = document.getElementById('right')
+    if (user.length == 0) {
+        console.log(user);
+        right.innerHTML = `<a class="hea_content" href="account/login/login.html">Login</a>
+        <a class="hea_content" href="account/register/register.html">register</a>
+        <a class="hea_setting" href="setting">
+        <i class="fa fa-gear" style="font-size:36px;"></i>
+    </a>`
+    } else {
+        console.log(user);
+        right.innerHTML = `
+    <h3 class="hea_user">${user[0].name}</h3>
+    <a class="hea_setting" href="setting">
+        <i class="fa fa-gear" style="font-size:36px;"></i>
+    </a>`
+    }
+}
+userprint()

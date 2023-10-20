@@ -30,6 +30,7 @@ header {
 
 
 .hea_content {
+    font-family: sans-serif;
     display: flex;
     align-items: center;
     color: white;
@@ -37,6 +38,16 @@ header {
     padding: 15px 25px;
     text-transform: uppercase;
 }
+.hea_user {
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    text-transform: uppercase;
+}
+
 
 .hea_content:hover {
     background-color: rgb(50, 50, 120);
@@ -94,31 +105,43 @@ nav {
 .content {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    /* background-color: rgb(20, 20, 60); */
+    flex-direction: column;
     background-color: rgb(115, 216, 234);
-    background-color: rgb(red, green, blue);
-    height: 1000px;
+    justify-content: center;
+}
+h1 {
+    margin-bottom: 50px;
+}
+h2 {
+    margin-bottom: 20px;
+    font-size: xx-large;
+    margin-left: 20px;
+}
+.content_container1 {
+    margin-bottom: 50px;
 }
 .content_box {
-    margin: 1%;
+    margin: 15px 0;
     display: flex;
-    align-items: center;
-    background-color: rgb(175, 186, 231);
-    width: 48%;
-    height: 100px;
+    flex-direction: column;
 }
-.content a {
-    padding: 10px;
-    display: flex;
-    text-decoration: none;
+.content_box h3 {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    font-size: x-large;
+    font-weight: 4000;
+}
+.content_box p {
+    padding-bottom: 20px;
+    text-align: justify;
+    font-size:x-large;
+    margin: 0 20px;
+    width: 95%;
 }
 .content_box img {
-    width: 130px;
-    height: 80px;
-    object-fit: cover;
-    margin-right: 8px;
+    padding: 5px 0;
+    margin: 0 20px;
+    width: 80%;
 }
 .information h3 {
     color: black;

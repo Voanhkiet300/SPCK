@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Newpost.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-left">
+            <img class="logo" src="../../image/logo.png" alt="">
+            <a class="hea_content" href="">home</a>
+            <a class="hea_content">About us</a>
+            <a class="hea_content" href="https://mail.google.com/mail/u/0/#inbox">feedback</a>
+        </div>
+        <div class="header-right" id="right">
+        </div>
+    </header>
+    <div class="container">
+        <nav id="nav">
+            <div class="nav_box">
+                <a href="../../../index.html" class="nav_content">Home</a>
+                <a href="../../../news/news.html" class="nav_content">News</a>
+                <a href="../../../sport/sport.html" class="nav_content">Sport</a>
+                <a href="../../../post/post.html" class="nav_content main">post</a>
+                <a href="../../../weather/weather.html" class="nav_content">weather</a>
+                <a href="../../../event/event.html" class="nav_content">event</a>
+            </div>
+        </nav>
+        <div class="box">
+            <div id="content" class="content">
+                <form class="Newpost" id="Newpost">
+                    <h2>Tạo bài viết</h2>
+                    <div class="user-box">
+                        <input id="caption" type="text" name="" required="" placeholder="caption">
+                    </div>
+                    <div class="user-box image-box" id="image_box">
+                        <label id="label" class="choose" for="image-input">chọn ảnh</label>
+                        <input id="image-input" type="file" accept="image/jpeg, image/png, image/jpg" placeholder="Password">
+                        <img src="" alt="" id="img">
+                    </div>
+                    <div class="user-box">
+                        <textarea id="contentInput" type="text" name="" required="" placeholder="nội dung"></textarea>
+                    </div>
+                    <div class="selector">
+                        <button type="submit" class="btn">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="Newpost.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+
+</html>

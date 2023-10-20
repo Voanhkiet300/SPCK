@@ -8,7 +8,9 @@ body {
     flex-direction: column;
 }
 
-header {
+.header {
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-between;
     background-color: rgb(25, 12, 82);
@@ -30,6 +32,16 @@ header {
 
 
 .hea_content {
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    text-transform: uppercase;
+}
+.hea_user {
+    font-family: sans-serif;
     display: flex;
     align-items: center;
     color: white;
@@ -94,8 +106,7 @@ nav {
 .content {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
     /* background-color: rgb(20, 20, 60); */
     background-color: rgb(115, 216, 234);
     background-color: rgb(red, green, blue);
@@ -106,8 +117,8 @@ nav {
     display: flex;
     align-items: center;
     background-color: rgb(175, 186, 231);
-    width: 48%;
-    height: 100px;
+    width: 95%;
+    height: 130px;
 }
 .content a {
     padding: 10px;
@@ -115,20 +126,64 @@ nav {
     text-decoration: none;
 }
 .content_box img {
-    width: 130px;
-    height: 80px;
+    width: 200px;
+    height: 110px;
     object-fit: cover;
     margin-right: 8px;
 }
+.information {
+    width: 82%;
+    display: flex;
+    flex-direction: column;
+}
 .information h3 {
     color: black;
+    font-size: x-large;
 }
 .information p {
+    font-size: large;
     color: black;
 }
 
 
-footer {
-    background-color: green;
+
+.footer {
+    display: flex;
+    background-color: rgb(140, 180, 242);
+    width: 100%;
+    height: 20vh;
+}
+.footer>img {
+    margin: auto 10px;
     height: 100px;
+}
+
+.family {
+    display: flex;
+    width: 40%;
+    margin: auto 1vw;
+}
+
+.contact {
+    margin: 4vh 0;
+    margin-right: auto;
+}
+.follow {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin: 4vh ;
+}
+.follow img {
+    width: 8vh;
+}
+.follow__img {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.image__First {
+    display: flex;
+    width: 100%;
 }

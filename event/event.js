@@ -24,18 +24,60 @@ let ContentList = [
         'tittle': ['Tổng hợp truyện ma Halloween nghe rùng mình nhất'],
         'image': ['https://taimienphi.vn/tmp/cf/aut/fnl8-truyen-ma-hallowen-nghe-rung-minh-nhat-1.jpg'],
         'paragraph': ['tổng hợp rất nhiều câu chuyện ma kinh dị, giật mình hay nhất giúp bạn có nhiều lựa chọn và kéo dài buổi lễ hội hóa trang của mình hơn.']
+    },
+    {
+        'href': ['event-content/Bí ngô/event-content.html'],
+        'tittle': ['Tổng hợp truyện ma Halloween nghe rùng mình nhất'],
+        'image': ['https://image.vtc.vn/resize/th/upload/2022/10/29/qua-bi-ngo-halloween-09195860.jpg'],
+        'paragraph': ['Những quả bí ngô khắc vô số hình thù độc đáo xuất hiện ở khắp nơi vào dịp Halloween, khiến nhiều người không khỏi thắc mắc về nguồn gốc, ý nghĩa của biểu tượng này.']
     }
 ]
 
-
-for (let Content of ContentList) {
-    contents.innerHTML += `<div class="content_box">
-    <a href="${Content.href}">
-        <img src="${Content.image}" alt="">
-        <div class="information">
-            <h3 class="">${Content.tittle}</h3>
-            <p class="">${Content.paragraph}</p>
-        </div>
-    </a>
-</div>`;
+if (ContentList.length == 0) {
+    contents.innerHTML = `<img src="../no result.png" class="no_result" alt="">`
+} else {
+    for (let Content of ContentList) {
+        contents.innerHTML += `<div class="content_box">
+            <a href="${Content.href}">
+                <img src="${Content.image}" alt="">
+                <div class="information">
+                    <h3 class="">${Content.tittle}</h3>
+                    <p class="">${Content.paragraph}</p>
+                </div>
+            </a>
+        </div>`
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+function userprint() {
+    let user = JSON.parse(localStorage.getItem('user')) || []
+    let right = document.getElementById('right')
+    if (user == []) {
+        console.log(user);
+        right.innerHTML = `<a class="hea_content" href="account/login/login.html">Login</a>
+    <a class="hea_content" href="account/register/register.html">register</a>
+    <a class="hea_setting" href="setting">
+        <i class="fa fa-gear" style="font-size:36px;"></i>
+    </a>`
+    } else {
+        console.log(user);
+        right.innerHTML = `
+    <h3 class="hea_user">${user[0].name}</h3>
+    <a class="hea_setting" href="setting">
+        <i class="fa fa-gear" style="font-size:36px;"></i>
+    </a>`
+    }
+}
+userprint()
