@@ -1,3 +1,6 @@
+let my_content = document.getElementById('my_content')
+let all_content = document.getElementById('all_content')
+let user = JSON.parse(localStorage.getItem('user')) || []
 let contents = document.getElementById('content')
 let ContentList = [
     {
@@ -72,7 +75,6 @@ for (let Content of ContentList) {
 
 
 function userprint() {
-    let user = JSON.parse(localStorage.getItem('user')) || []
     let right = document.getElementById('right')
     if (user.length == 0) {
         console.log(user);
